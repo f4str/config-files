@@ -1,0 +1,9 @@
+startup_message off 
+vbell on
+autodetach on
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %d/%m %C%a"
+defscrollback 10000
+termcapinfo xterm* ti@:te@
+

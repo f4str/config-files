@@ -1,0 +1,30 @@
+{
+    "editor.suggestSelection": "first",
+    "editor.renderWhitespace": "boundary",
+    "editor.tabCompletion": "on",
+    "editor.acceptSuggestionOnEnter": "off",
+    "emmet.showSuggestionsAsSnippets": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vsintellicode.features.python.deepLearning": "enabled",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.chktex.enabled": true,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "explorer.sortOrder": "type",
+    "remote.SSH.remotePlatform": {
+        "venti": "linux",
+        "hercules": "linux"
+    },
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%",
+        "-xelatex"
+    ],
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    }
+}

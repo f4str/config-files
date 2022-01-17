@@ -1,0 +1,5 @@
+{
+	"font_size": 14,
+	"draw_white_space": ["selection", "leading", "trailing", "isolated", "enclosed_tabs"],
+	"spell_check": true,
+}
