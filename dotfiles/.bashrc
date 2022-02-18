@@ -72,12 +72,34 @@ xterm*|rxvt*)
     ;;
 esac
 
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# color man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS=-R
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# set editor
+export EDITOR=vim
+export VISUAL=vim
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -88,7 +110,29 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-[ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
+# some more ls aliases
+alias l='ls -F'
+alias la='ls -AF'
+alias ll='ls -lFh'
+alias lla='ls -lAFh'
+alias lr='ls -RF'
+
+# confirmations
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias ln='ln -iv'
+alias mkdir='mkdir -v'
+alias rmdir='rmdir -v'
+alias df='df -h'
+
+# shortcuts
+alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
+alias bashrc='${EDITOR} ~/.bashrc'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
