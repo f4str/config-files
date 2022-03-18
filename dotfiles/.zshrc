@@ -81,7 +81,6 @@ alias rmdir='rmdir -v'
 alias df='df -h'
 
 # shortcuts
-alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
 alias zshrc='${EDITOR} ~/.zshrc'
 
 # archive extractor

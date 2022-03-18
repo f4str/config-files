@@ -127,7 +127,6 @@ alias rmdir='rmdir -v'
 alias df='df -h'
 
 # shortcuts
-alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
 alias bashrc='${EDITOR} ~/.bashrc'
 
 # Add an "alert" alias for long running commands.  Use like so:
