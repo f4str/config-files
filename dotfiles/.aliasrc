@@ -1,0 +1,76 @@
+# add color
+alias ls='ls --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# ls aliases
+alias l='ls -F'
+alias la='ls -AF'
+alias ll='ls -lFh'
+alias lla='ls -lAFh'
+alias lr='ls -RF'
+
+# confirmations
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias ln='ln -iv'
+alias mkdir='mkdir -v'
+alias rmdir='rmdir -v'
+alias df='df -h'
+
+# shortcuts
+alias bashrc='${EDITOR} ~/.bashrc'
+alias zshrc='${EDITOR} ~/.zshrc'
+alias aliasrc='${EDITOR} ~/.aliasrc'
+alias vimrc=$'${EDITOR} ~/.vimrc'
+
+# archive extractor
+extract () {
+  if [ -z $1 ] ; then
+    echo "file not provided"
+  elif [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# python virtual environment activator
+activate() {
+  local possible_dirs=(venv env .venv .env)
+  for dir in ${possible_dirs[@]}; do
+    file="${dir}/bin/activate"
+    if [ -f $file ]; then
+      . ${file}
+      return
+    fi
+  done
+  echo "virtual environment not found"
+}
+
+# set editor
+export EDITOR=vim
+export VISUAL=vim
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# enable ROCm
+export HSA_OVERRIDE_GFX_VERSION="10.3.0"
+

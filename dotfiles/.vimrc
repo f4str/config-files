@@ -8,7 +8,7 @@ highlight LineNr term=bold ctermfg=DarkGrey
 " show current position
 set ruler
 
-" Show matching brackets
+" show matching brackets
 set showmatch
 
 " filetype plugins
@@ -25,11 +25,17 @@ set smartindent
 set copyindent
 set preserveindent
 
-" Wild menu
+" wild menu
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 
-" Searching
+" searching
 set hlsearch
 set incsearch
+
+" powerline
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set t_Co=256
 
