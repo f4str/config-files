@@ -89,4 +89,10 @@ if [ -f /usr/share/powerlevel10k/powerlevel10k.zsh-theme ]; then
 fi
 ```
 
-Copy `dotfiles/.p10k.zsh` to `~/.p10k.zsh`. Then close and relaunch the terminal.
+Configure the powerlevel10k theme.
+
+```sh
+p10k
+```
+
+Alternatively, copy `dotfiles/.p10k.zsh` to `~/.p10k.zsh`.

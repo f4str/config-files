@@ -17,8 +17,9 @@ Recommended btrfs subvolume layout for creating snapshots using Timeshift.
 
 Recommended options in the file system table (`/etc/fstab`) for each of the btrfs subvolumes.
 
-```sh
-noatime,compress=zstd:1,space_cache=v2,ssd,subvol=@
+```diff
+- subvol=@,compress=zstd:1
++ subvol=@,noatime,compress=zstd:1,space_cache=v2,ssd
 ```
 
 ## Disable Copy-on-Write on VM Images
