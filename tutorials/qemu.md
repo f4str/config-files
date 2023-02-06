@@ -16,6 +16,12 @@ Enable and start the virtualization daemon.
 sudo systemctl enable --now libvirtd
 ```
 
+Install the spice agent to share clipboards with the virtual machine.
+
+```sh
+sudo dnf install spice-vdagent
+```
+
 ## User Groups
 
 Add the current user to the necessary virtualization groups. If the group does not exist, then you can ignore it.
@@ -34,4 +40,18 @@ If using btrfs, disable copy-on-write for the `/var/lib/libvirt/images` director
 
 ```sh
 sudo chattr -R +C /var/lib/libvirt/images
+```
+
+## Remove GNOME Boxes
+
+Optionally, remove GNOME Boxes now that Virtual Machine Manager will be used.
+
+```sh
+sudo dnf remove gnome-boxes
+```
+
+If not automatically cleaned, delete the directory.
+
+```sh
+rm -rf ~/.local/share/gnome-boxes
 ```
