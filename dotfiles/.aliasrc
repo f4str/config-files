@@ -12,13 +12,10 @@ alias lla='ls -lAFh'
 alias lr='ls -RF'
 
 # confirmations
-alias rm='rm -iv'
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias ln='ln -iv'
-alias mkdir='mkdir -v'
-alias rmdir='rmdir -v'
-alias df='df -h'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ln='ln -i'
 
 # shortcuts
 alias bashrc='${EDITOR} ~/.bashrc'

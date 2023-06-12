@@ -1,6 +1,6 @@
 # Boot Menu
 
-Enable the GRUB boot menu, set the boot timeout, and disable the plymouth splash.
+Enable the GRUB boot menu, set the boot timeout, and optionally disable the plymouth splash.
 
 ## Enable GRUB Menu
 
@@ -28,11 +28,10 @@ Modify the `GRUB_TIMEOUT` variable. The unit is in seconds.
 Regenerate the GRUB config.
 
 ```sh
-sudo grub2-mkconfig -o /etc/grub2.cfg
-sudo grub2-mkconfig -o /etc/grub2-efi.cfg
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
-## Disable Plymouth splash
+## Disable Plymouth Splash (Optional)
 
 Optionally to always show the console when booting, change the plymouth theme.
 

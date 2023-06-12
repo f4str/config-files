@@ -1,6 +1,6 @@
 # Multimedia Codecs
 
-Install all multimedia codecs on Fedora for audio and video to work for most software.
+Install all multimedia codecs on Fedora for audio and video to work for the Firefox RPM. This is not needed if using the Firefox flatpak.
 
 ## RPM Fusion
 

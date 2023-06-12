@@ -15,7 +15,7 @@ Either run `zsh` to configure it or copy `dotfiles/.zshrc` and `dotfiles/.aliasr
 Install the chsh package using `dnf`.
 
 ```sh
-sudo dnf install util-linux
+sudo dnf install util-linux-user
 ```
 
 Set zsh as the default shell.

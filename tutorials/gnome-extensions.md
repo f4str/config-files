@@ -48,7 +48,6 @@ Using Extension Manager, install the recommended extensions.
 * Extension list
 * Fullscreen Avoider
 * Lock Keys
-* Media Controls
 * Removable Drive Menu
 
 ## GNOME Applications

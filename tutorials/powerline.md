@@ -13,7 +13,7 @@ sudo dnf install powerline powerline-fonts
 Edit the `~/.bashrc` file to add the following at the end. If using `dotfiles/.bashrc` from this repo, this is already included.
 
 ```bash
-if [ -f `which powerline-daemon` ]; then
+if [ -f $(which powerline-daemon) ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1

@@ -19,7 +19,7 @@ Recommended options in the file system table (`/etc/fstab`) for each of the btrf
 
 ```diff
 - subvol=@,compress=zstd:1
-+ noatime,compress=zstd:1,space_cache=v2,ssd,subvol=@
++ noatime,compress=zstd:1,subvol=@
 ```
 
 ## Disable Copy-on-Write on VM Images
